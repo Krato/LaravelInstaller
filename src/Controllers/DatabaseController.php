@@ -1,10 +1,10 @@
 <?php
 
-namespace RachidLaasri\LaravelInstaller\Controllers;
+namespace Infinety\LaravelInstaller\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
-use RachidLaasri\LaravelInstaller\Helpers\DatabaseManager;
+use Infinety\LaravelInstaller\Helpers\DatabaseManager;
 
 class DatabaseController extends Controller
 {

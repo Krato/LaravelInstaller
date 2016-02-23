@@ -1,10 +1,10 @@
 <?php
 
-namespace RachidLaasri\LaravelInstaller\Controllers;
+namespace Infinety\LaravelInstaller\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use RachidLaasri\LaravelInstaller\Helpers\PermissionsChecker;
+use Infinety\LaravelInstaller\Helpers\PermissionsChecker;
 
 class PermissionsController extends Controller
 {

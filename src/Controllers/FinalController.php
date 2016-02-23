@@ -1,9 +1,9 @@
 <?php
 
-namespace RachidLaasri\LaravelInstaller\Controllers;
+namespace Infinety\LaravelInstaller\Controllers;
 
 use App\Http\Controllers\Controller;
-use RachidLaasri\LaravelInstaller\Helpers\InstalledFileManager;
+use Infinety\LaravelInstaller\Helpers\InstalledFileManager;
 
 class FinalController extends Controller
 {

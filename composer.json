@@ -1,17 +1,21 @@
 {
-  "name": "rachidlaasri/laravel-installer",
-  "description": "Laravel web installer",
+  "name": "infinety-es/laravel-installer",
+  "description": "Laravel web installer Modified",
   "license": "MIT",
   "authors": [
     {
       "name": "Rachid Laasri",
       "email": "rashidlaasri@gmail.com"
+    },
+    {
+      "name": "Eric Lagarda",
+      "email": "info@ericlagarda.com"
     }
   ],
   "require": {},
   "autoload": {
     "psr-4": {
-      "RachidLaasri\\LaravelInstaller\\": "src/"
+      "Infinety\\LaravelInstaller\\": "src/"
     },
     "files": [
       "src/functions.php"

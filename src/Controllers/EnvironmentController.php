@@ -1,11 +1,11 @@
 <?php
 
-namespace RachidLaasri\LaravelInstaller\Controllers;
+namespace Infinety\LaravelInstaller\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
-use RachidLaasri\LaravelInstaller\Helpers\EnvironmentManager;
+use Infinety\LaravelInstaller\Helpers\EnvironmentManager;
 use Validator;
 
 class EnvironmentController extends Controller

@@ -1,9 +1,9 @@
 <?php
 
-namespace RachidLaasri\LaravelInstaller\Controllers;
+namespace Infinety\LaravelInstaller\Controllers;
 
 use App\Http\Controllers\Controller;
-use RachidLaasri\LaravelInstaller\Helpers\RequirementsChecker;
+use Infinety\LaravelInstaller\Helpers\RequirementsChecker;
 
 class RequirementsController extends Controller
 {
