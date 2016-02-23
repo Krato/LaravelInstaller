@@ -51,9 +51,18 @@ return [
         'title' => 'Environment Settings',
         'save' => 'Save .env',
         'success' => 'Your .env file settings have been saved.',
-        'errors' => 'Unable to save the .env file, Please create it manually.',
+        'errors' => 'Database connection error. We cant connect to database with your settings',
     ],
 
+
+    /**
+     *
+     * Permissions page translations.
+     *
+     */
+    'migrations' => [
+        'title' => 'Migrations',
+    ],
 
     /**
      *

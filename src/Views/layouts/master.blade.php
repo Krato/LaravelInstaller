@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="{{ asset('installer/img/favicon/favicon-16x16.png') }}" sizes="16x16"/>
     <link rel="icon" type="image/png" href="{{ asset('installer/img/favicon/favicon-32x32.png') }}" sizes="32x32"/>
     <link rel="icon" type="image/png" href="{{ asset('installer/img/favicon/favicon-96x96.png') }}" sizes="96x96"/>
-    <link href="{{ asset('installer/css/style.min.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('installer/css/style.css') }}" rel="stylesheet"/>
   </head>
   <body>
     <div class="master">
@@ -19,12 +19,19 @@
           <li class="step__divider"></li>
           <li class="step__item {{ isActive('LaravelInstaller::final') }}"><i class="step__icon database"></i></li>
           <li class="step__divider"></li>
-          <li class="step__item {{ isActive('LaravelInstaller::permissions') }}"><i class="step__icon permissions"></i></li>
+
+          <li class="step__item {{ isActive('LaravelInstaller::migrations') }}"><i class="step__icon migrations"></i></li>
           <li class="step__divider"></li>
-          <li class="step__item {{ isActive('LaravelInstaller::requirements') }}"><i class="step__icon requirements"></i></li>
-          <li class="step__divider"></li>
+
           <li class="step__item {{ isActive('LaravelInstaller::environment') }}"><i class="step__icon update"></i></li>
           <li class="step__divider"></li>
+
+          <li class="step__item {{ isActive('LaravelInstaller::permissions') }}"><i class="step__icon permissions"></i></li>
+          <li class="step__divider"></li>
+
+          <li class="step__item {{ isActive('LaravelInstaller::requirements') }}"><i class="step__icon requirements"></i></li>
+          <li class="step__divider"></li>
+
           <li class="step__item {{ isActive('LaravelInstaller::welcome') }}"><i class="step__icon welcome"></i></li>
           <li class="step__divider"></li>
         </ul>

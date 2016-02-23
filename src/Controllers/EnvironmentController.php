@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use RachidLaasri\LaravelInstaller\Helpers\EnvironmentManager;
+use Validator;
 
 class EnvironmentController extends Controller
 {
@@ -30,9 +31,11 @@ class EnvironmentController extends Controller
      */
     public function environment()
     {
-        $envConfig = $this->EnvironmentManager->getEnvContent();
-
-        return view('vendor.installer.environment', compact('envConfig'));
+        $host = env('DB_HOST');
+        $database = env('DB_DATABASE');
+        $username = env('DB_USERNAME');
+        $password = env('DB_PASSWORD');
+        return view('vendor.installer.environment', compact('host', 'database', 'username', 'password'));
     }
 
 
@@ -45,9 +48,21 @@ class EnvironmentController extends Controller
      */
     public function save(Request $input, Redirector $redirect)
     {
-        $message = $this->EnvironmentManager->saveFile($input);
 
-        return $redirect->route('LaravelInstaller::environment')
+
+
+        $this->validate($input, [
+            'database' => 'required',
+            'user' => 'required',
+            'password' => 'required',
+            'host' => 'required',
+        ]);
+
+        $message = $this->EnvironmentManager->setDatabaseSetting($input);
+
+//        $message = $this->EnvironmentManager->saveFile($input);
+
+        return $redirect->route('LaravelInstaller::database')
                         ->with(['message' => $message]);
     }
 

@@ -34,6 +34,11 @@ Route::group(['prefix' => 'install', 'as' => 'LaravelInstaller::', 'namespace' =
             'uses' => 'DatabaseController@database'
         ]);
 
+        Route::get('migrations', [
+            'as' => 'migrations',
+            'uses' => 'DatabaseController@getMigrations'
+        ]);
+
         Route::get('final', [
             'as' => 'final',
             'uses' => 'FinalController@finish'
