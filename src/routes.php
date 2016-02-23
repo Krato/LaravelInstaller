@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'install', 'as' => 'LaravelInstaller::', 'namespace' => 'Infinety\LaravelInstaller\Controllers'], function()
+Route::group(['prefix' => 'install', 'as' => 'LaravelInstaller::', 'namespace' => 'RachidLaasri\LaravelInstaller\Controllers'], function()
 {
     Route::group(['middleware' => 'canInstall'], function()
     {
@@ -38,6 +38,17 @@ Route::group(['prefix' => 'install', 'as' => 'LaravelInstaller::', 'namespace' =
             'as' => 'migrations',
             'uses' => 'DatabaseController@getMigrations'
         ]);
+
+        Route::get('admin', [
+            'as' => 'admin',
+            'uses' => 'UserAdminController@createAdmin'
+        ]);
+
+        Route::post('admin/save', [
+            'as' => 'userAdminSave',
+            'uses' => 'UserAdminController@storeAdmin'
+        ]);
+
 
         Route::get('final', [
             'as' => 'final',
